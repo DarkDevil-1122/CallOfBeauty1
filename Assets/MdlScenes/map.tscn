@@ -1,0 +1,18 @@
+[gd_scene load_steps=5 format=3 uid="uid://dsk7j0ruai0f"]
+
+[ext_resource type="PackedScene" uid="uid://ct3hwb6sy6rxv" path="res://Assets/Models/Enviorment.blend" id="1_y6ngl"]
+[ext_resource type="Texture2D" uid="uid://b0pf8ep011egn" path="res://Assets/Textures/OtherTexture.png" id="2_bw0sm"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_uxbgd"]
+albedo_color = Color(0.215902, 0.215902, 0.215902, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hsaxk"]
+albedo_texture = ExtResource("2_bw0sm")
+uv1_scale = Vector3(0.72, 0.72, 0.72)
+uv1_triplanar = true
+
+[node name="Map" instance=ExtResource("1_y6ngl")]
+
+[node name="Plane" parent="." index="0"]
+surface_material_override/0 = SubResource("StandardMaterial3D_uxbgd")
+surface_material_override/1 = SubResource("StandardMaterial3D_hsaxk")
